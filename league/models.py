@@ -24,7 +24,7 @@ class Season(models.Model):
     end_date = models.DateField()
 
 class TeamSeason(models.Model):
-    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='%(class)s_requests_created')
+    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='teamseason_team_requests_created')
     season = models.ForeignKey(Season, on_delete=models.CASCADE, related_name='%(class)s_requests_created')
     wins = models.IntegerField()
     losses = models.IntegerField()

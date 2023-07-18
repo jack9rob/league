@@ -19,5 +19,6 @@ from league import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('teams/', views.team_list),
+    path('teams/', views.team.team_list),
+    path('teams/<int:id>', views.team.team_detail)
 ]
